@@ -93,7 +93,7 @@ SDL_SYS_JoystickDetect(void)
 	padInfo padinfo;
 
 	int iReturn = ioPadGetInfo(&padinfo);
-	pdprintf("\tGot info\n");
+	//pdprintf("\tGot info\n");   /* This spams the LV2 TTY */
 	if( iReturn != 0)
 	{
 		SDL_SetError("SDL_SYS_JoystickInit() : Couldn't get PS3 pads information ");
